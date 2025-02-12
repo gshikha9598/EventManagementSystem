@@ -42,7 +42,7 @@ public class AuthService {
     private String keycloakRealm;
 
     @PostConstruct  //method call automatically when object use first time use like- @Observes StartupEvent
-    public void initKeycloak() {
+    public void initKeycloak() { //initialize keycloak object
         keycloak = KeycloakBuilder.builder()
                 .serverUrl("http://localhost:8081")
                 .realm(keycloakRealm)
