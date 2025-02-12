@@ -8,6 +8,16 @@ EventManagementSystem
 =======
 # first-quarkus-app
 
+<<<<<<< HEAD
+=======
+EventManagementSystem
+=======
+<<<<<<< HEAD
+# EventManagementSystem
+=======
+# first-quarkus-app
+
+>>>>>>> 6cf8d8b (Updated project files)
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 If you want to learn more about Quarkus, please visit its website: <https://quarkus.io/>.
@@ -73,4 +83,11 @@ Easily start your RESTful Web Services
 
 [Related guide section...](https://quarkus.io/guides/getting-started#the-jax-rs-resources)
 >>>>>>> 0afbc10 (Initial commit)
+<<<<<<< HEAD
 >>>>>>> 7f9de0a (Initial commit)
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7f9de0a (Initial commit)
+>>>>>>> 6cf8d8b (Updated project files)
+>>>>>>> f97e461 (Updated project files)
