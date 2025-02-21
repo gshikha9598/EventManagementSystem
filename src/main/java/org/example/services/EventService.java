@@ -39,12 +39,12 @@ public class EventService {
     @Transactional
     public void createEvent(Event event){
         eventRepository.persist(event);
-        kafkaService.publishEventMessage(event);
+        kafkaService.publishEventMessage(event); // publish to kafka
     }
 
     @Transactional
     public void updatedEvent(Event event){
-        entityManager.merge(event); //eventRepository.persist(event);
+        entityManager.merge(event);
     }
 
     @Transactional

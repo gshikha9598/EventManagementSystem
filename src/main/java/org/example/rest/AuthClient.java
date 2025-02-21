@@ -1,13 +1,10 @@
 package org.example.rest;
 
-import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
-
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.FormParam;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
-import jakarta.ws.rs.core.MediaType;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 import org.example.dto.TokenResponse;
 import org.jboss.resteasy.reactive.RestForm;
@@ -20,7 +17,7 @@ public interface AuthClient {
         @Path("/token")
         @POST
         public TokenResponse login(
-                @FormParam("grant_type") String grantType,
+                @FormParam("grant_type") String grantType, //@FormParam- body response
                 @FormParam("client_id") String clientId,
                 @FormParam("client_secret") String clientSecret,
                 @FormParam("username")  String username,
@@ -32,7 +29,7 @@ public interface AuthClient {
         @POST
         @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
         public void logout(
-                @RestForm("client_id") String client_id,
+                @RestForm("client_id") String client_id,  //@RestForm- body response
                 @RestForm("refresh_token") String refresh_token,
                 @RestForm("client_secret") String client_secret
         );

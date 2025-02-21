@@ -1,11 +1,8 @@
 package org.example.services;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import io.quarkus.runtime.StartupEvent;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
-import jakarta.enterprise.event.Observes;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.core.Response;
 import lombok.extern.slf4j.Slf4j;
@@ -21,9 +18,7 @@ import org.keycloak.admin.client.Keycloak;
 import org.keycloak.admin.client.KeycloakBuilder;
 import org.keycloak.representations.idm.CredentialRepresentation;
 import org.keycloak.representations.idm.UserRepresentation;
-
 import java.util.Collections;
-import java.util.List;
 
 @ApplicationScoped
 @Slf4j
@@ -99,7 +94,7 @@ public class AuthService {
 
     public TokenResponse login(LoginDto loginDto) {
         try {
-            TokenResponse tokenResponse = authClient.login(
+            TokenResponse tokenResponse = authClient.login(  //send these details for login from keycloak
                     "password",
                     "event",
                     "sHlqht10GxpyNaMzmiJlSSlpfWp632Ca",

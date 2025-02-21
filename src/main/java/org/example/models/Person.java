@@ -2,8 +2,8 @@ package org.example.models;
 
 import jakarta.persistence.*;
 import lombok.Data;
-
 import java.util.List;
+
 
 @Entity
 @Data
@@ -19,7 +19,5 @@ public class Person {
 
     @ManyToMany(mappedBy = "registeredUsers")
     private List<Event> eventList;
-
-    //private String role;  // 'admin' or 'user'
 
 }

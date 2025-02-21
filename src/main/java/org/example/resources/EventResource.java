@@ -4,7 +4,6 @@ import io.quarkus.security.Authenticated;
 import jakarta.annotation.security.RolesAllowed;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
-import jakarta.transaction.Transactional;
 import org.eclipse.microprofile.graphql.GraphQLApi;
 import org.eclipse.microprofile.graphql.Mutation;
 import org.eclipse.microprofile.graphql.Query;
@@ -12,8 +11,6 @@ import org.example.dto.EventDto;
 import org.example.models.Event;
 import org.example.services.EventService;
 import org.example.services.KafkaService;
-import org.keycloak.representations.JsonWebToken;
-
 import java.util.List;
 
 @GraphQLApi
